@@ -1,0 +1,219 @@
+.header {
+  background-color: var(--primary-color);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.divisoria {
+  display: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: var(--spacing-lg);
+  gap: 5px;
+  font-size: 34px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.titulo {
+  text-decoration: none;
+  color: dodgerblue;
+}
+
+.nav {
+  margin-right: var(--spacing-lg);
+}
+
+.menuSanduicheIcon {
+  display: block;
+  width: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menuSanduicheIcon span {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #333333;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+.menuSanduicheIcon.aberto span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menuSanduicheIcon.aberto span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuSanduicheIcon.aberto span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.menuLista {
+  position: absolute;
+  width: 100%;
+  top: 85px;
+  display: none;
+  list-style: none;
+  margin-top: 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(var(--spacing-sm));
+}
+
+.menuLista.aberto {
+  display: block;
+}
+
+.menuLista li {
+  padding: 16px;
+  text-align: center;
+}
+
+.linkOne a {
+  color: var(--nav-text-color);
+}
+
+.linkTwo a {
+  color: var(--nav-text-color-two);
+}
+
+.linkThree a {
+  color: var(--nav-text-color-three);
+}
+
+.linkFour a {
+  color: var(--nav-text-color-four);
+}
+
+.menuLista a {
+  text-decoration: none;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .header {
+    max-width: 992px;
+  }
+
+  .divisoria {
+    display: block;
+    width: 2px;
+    height: 60%;
+    background-color: var(--text-color-two);
+    flex-shrink: 0;
+  }
+
+  .logo {
+    font-size: 26px;
+    margin-right: 10px;
+  }
+
+  .menuSanduicheIcon {
+    display: none;
+  }
+
+  .menuLista {
+    position: static;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-right: var(--spacing-lg);
+    background-color: transparent;
+    backdrop-filter: none;
+  }
+
+  .menuLista a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-size: 26px;
+  }
+
+  .menuLista a::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color-two);
+    transition: width 0.3s ease;
+  }
+
+  .menuLista a:hover::after {
+    width: 100%;
+  }
+}
+
+@media (min-width: 993px) {
+  .header {
+    height: 180px;
+  }
+
+  .divisoria {
+    display: block;
+    width: 2px;
+    height: 60%;
+    background-color: var(--text-color-two);
+    flex-shrink: 0;
+  }
+
+  .logo {
+    gap: var(--spacing-sm);
+    font-size: 46px;
+    font-weight: bold;
+  }
+
+  .menuSanduicheIcon {
+    display: none;
+  }
+
+  .menuLista {
+    position: static;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-right: var(--spacing-md);
+    background-color: transparent;
+    backdrop-filter: none;
+  }
+
+  .menuLista a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-size: var(--spacing-lg);
+  }
+
+  .menuLista a::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color-two);
+    transition: width 0.3s ease;
+  }
+
+  .menuLista a:hover::after {
+    width: 100%;
+  }
+}

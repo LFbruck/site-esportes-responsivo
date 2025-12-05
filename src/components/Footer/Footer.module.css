@@ -1,0 +1,71 @@
+.footer {
+  border-top: 1px solid var(--text-color-two);
+  color: #fff;
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.titulo {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.containerMembros {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.membro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: rgba(42, 42, 42, 0.84);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
+
+.membro:hover {
+  background-color: rgba(42, 42, 42, 0.84);
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--nav-text-color-four);
+}
+
+.nome {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.linkedin {
+  color: var(--nav-text-color-four);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.linkedin:hover {
+  text-decoration: underline;
+}
+
+.copy {
+  margin-top: 25px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+@media (min-width: 577px) {
+  .containerMembros {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,23 @@
+:root {
+  --primary-color: white;
+  --text-color-one: white;
+  --text-color-two: rgba(66, 39, 39, 0.33);
+  --nav-text-color: #ff9900;
+  --nav-text-color-two: #d20404;
+  --nav-text-color-three: #06d006;
+  --nav-text-color-four: dodgerblue;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+}

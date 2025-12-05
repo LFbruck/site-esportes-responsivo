@@ -1,0 +1,29 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .mainContainer {
+    max-width: 992px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: var(--spacing-lg);
+  }
+
+  .mainContainer > :nth-child(1) {
+    grid-column: 1/-1;
+  }
+}
+
+@media (min-width: 993px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
